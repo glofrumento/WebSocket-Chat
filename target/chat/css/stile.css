@@ -1,0 +1,233 @@
+@font-face {
+   font-family: 'chat';
+   src: url('modernpics.otf');
+}
+
+#avatar {
+	font-family: 'chat';
+	opacity:.3;
+	font-size:130%; 
+	margin-right:5px; 
+	margin-top:0;
+}
+
+#avatar a{ 
+	color:#f33796; 
+	text-decoration:none;
+}
+
+#inizia a{ 
+	color:#f33796; 
+	text-decoration:none;
+}
+
+span{
+	float:right; 
+	color:rgba(46,75,16,1);
+}
+
+#nome, #messaggio{
+	width:80%; 
+	height:40px; 
+	border:1px solid #444; 
+	padding:5px; 
+	margin-top:10px;
+	border:1px solid rgba(46,75,16,1);
+}
+
+#nome,label[for="nome"]{
+	visibility:hidden;
+}
+
+label[for="nome"],label[for="messaggio"]{
+	cursor:pointer;
+	float:right; 
+	width:17%; 
+	height:40px; 
+	line-height:40px;
+	margin-top:10px; 
+	text-align:center; 
+	background:#5bc4f1; 
+	color:#fff;
+	border:1px solid rgba(46,75,16,1);
+}
+
+label[for="nome"]:hover,label[for="messaggio"]:hover{background:#f33796; }
+
+
+#testo{
+	border:1px solid rgba(46,75,16,1); 
+	width:100%;
+	height:350px; 
+	margin-top:30px; 
+	padding:5px;
+	overflow:auto; 
+	background:rgba(204,255,153,.4);
+}
+
+ul.navigation ul{ display:none;}
+
+ul.navigation li:hover ul{ display:block;}
+
+ul.navigation li:hover ul li{  
+  padding: .5em .5em .5em 1em;
+  color: white;
+  font-size: 1em;
+  transition: color 0.5s;
+}
+
+ul.navigation li:hover ul li:before{  
+	font-family: 'chat'; 
+	content:'f';
+	margin-right:10px;
+}
+
+ul.navigation li:hover ul li:hover {
+  color: #c74438; 
+  border-left:5px solid #c74438;
+}
+
+#testo p.left{ background:#ffff99; float:left; width:85%; padding:0 5px 5px; margin-bottom:10px; font-size:90%;}
+
+#testo p.right{ background:#ccff99;float:right;text-align:right; width:85%; padding:0 5px 5px; margin-bottom:10px; font-size:90%;}
+
+
+#testo p.left:before{	
+	font-family: 'chat'; 
+	content:'f';
+	margin-right:10px;
+	font-size:150%;
+}
+
+#testo p.right:before{	
+	font-family: 'chat'; 
+	content:'f';
+	margin-right:10px;
+	font-size:150%;
+}
+
+#messaggio{ display:none;}
+
+label[for="messaggio"]{ display:none;}
+
+label[for="messaggio"] a { text-decoration:none; color:#fff;}
+
+.navigation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 0;
+
+  list-style: none;
+  background: #111;
+}
+
+.nav-item {
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+.nav-item a {
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-item a:hover {
+  color: #c74438; 
+  border-left:5px solid #c74438;
+}
+
+.site-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 5px 1em 3em 2.5em;
+}
+
+/* Stile del checkbox */
+.nav-trigger {
+  position: absolute;
+  display:none;
+}
+
+label[for="nav-trigger"] {
+  position: fixed;
+  top: 5px;
+  left: 5px; 
+  z-index: 3;
+  
+  height: 28px;
+  width: 27px;
+  cursor: pointer;
+  background-image: url("menu.png");
+  background-size: contain;
+}
+
+.nav-trigger + label, .site-wrap {
+  transition: left 0.5s;
+}
+
+/*FONDAMENTALE*/
+.nav-trigger:checked + label {
+  left: 205px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+}
+/*FONDAMENTALE*/
+
+
+body {
+  overflow-x: hidden;
+}
+
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+
+html, body { height: 100%; width: 100%; font-family: 'Open Sans', sans-serif;}
+
+/* MEDIA QUERY*/
+
+@media screen and (max-width:1024px) and (orientation:portrait)
+{
+#testo{
+
+	height:700px;
+	}
+}
+
+@media screen and (max-width:1024px) and (orientation:landscape)
+{
+#testo{
+
+	height:350px;
+	}
+}
+
+@media screen and (max-width:480px) and (orientation:portrait)
+{
+#testo{
+
+	height:330px;
+	}
+}
+
+@media screen and (max-width:480px) and (orientation:landscape)
+{
+#testo{
+
+	height:180px;
+	}
+}
+

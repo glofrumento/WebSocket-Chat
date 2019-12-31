@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Chat</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/stile.css">
+
+  </head>
+
+  <body id="top">
+
+    <ul class="navigation">
+      <li class="nav-item"><a href="#">Membri</a>
+        <ul id="membri">
+          <li></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="#">Impostazioni</a></li>
+      <li class="nav-item"><a href="#">Stato</a></li>
+
+      <li class="nav-item"><a href="#">Info...</a>
+        <ul id="info">
+          <li>Author: Giovanni Lofrumento</li>
+          <li>Version: 0.3.0</li>
+          <li>Date: Novembre 2015</li>
+        </ul>
+      </li>
+    </ul>
+
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+
+    <label for="nav-trigger"></label>
+
+    <div class="site-wrap">
+
+      <h3>
+        <span id="nomeUtente" style="float:left">CHAT</span> 
+        <span id="inizia" title="Fai clic per aprire la Chat"><a href="#nome" onclick="loggati()">Apri</a></span> 
+        <span id="avatar" title="Fai clic per aprire la Chat"><a href="#" onclick="loggati()">f</a></span>
+      </h3>
+
+      <div id="testo"></div>
+
+      <input type="text" placeholder="Inserisci il tuo nome" id="nome">
+      <label for="nome" onclick="inizia()">Invia</label>
+
+      <input type="text" placeholder="Scrivi il tuo messaggio" id="messaggio">
+      <label for="messaggio" onclick="scrivi()"><a href="#top">Invia</a></label>
+
+    </div>
+
+    <script src="js/chat.js"></script>
+
+  </body>
+
+</html>
